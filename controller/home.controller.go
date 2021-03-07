@@ -12,7 +12,7 @@ func (b *Base) HomeController(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("%s = %s\n", key, value)
 	}
 	response := "END This is the end"
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain")
 	w.WriteHeader(200)
 	w.Write([]byte(response))
 }
