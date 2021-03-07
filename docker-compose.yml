@@ -10,3 +10,10 @@ services:
     restart: unless-stopped
     volumes:
       - ./logs:/app/logs
+    depends_on:
+      - redis_db
+
+  redis_db:
+    image: redis
+    expose:
+      - 6379
